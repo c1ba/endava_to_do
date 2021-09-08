@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endava To Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="main">
+        <div style="width: 100%; display: flex; justify-content: space-between; align-items: flex-end;">
+            <div style="display: flex; width: 400px; justify-content: space-between; align-items: flex-end;">
+                <div style="display: flex; flex-direction: column;">
+                    <label for="todo_wish">Write your New Years's goal here</label><br>
+                    <input type="text" name="todo_wish" value="Some New Years's Eve goal" id="todo_input">
+                </div>
+                <button type="submit" name="submit_wish" id="submit_button">Submit</button>
+            </div>
+            <button type="submit" name="todo_suggest" id="todo_suggest">Suggest me something to do</button>
+            <button type="submit" name="save_ls" id="save_ls">Save me the list</button>
+        </div>
+        <div style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 50px;" id="todo_list"></div>
+    </div>
+
+<script type="application/javascript" src="script.js"></script>
+</body>
+</html>
