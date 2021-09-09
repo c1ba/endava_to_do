@@ -55,7 +55,6 @@ fetch("https://www.boredapi.com/api/activity/")
 
 let saveToLocalStorage = ()=>{
 let wishes = document.getElementsByClassName("wishDiv");
-console.log(checks);
 let tdList = [];
 for(i of wishes){
     tdList.push(i.innerText);
