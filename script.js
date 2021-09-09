@@ -42,7 +42,7 @@ todoList.appendChild(todoWish);
 }
 
 let suggestToList = ()=> {
-fetch("http://www.boredapi.com/api/activity/")
+fetch("https://www.boredapi.com/api/activity/")
 .then(response =>{ 
     console.log(response);
     return response.json();})
