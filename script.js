@@ -20,7 +20,13 @@ let loadLocalStorage = ()=>{
         }
 
         const checkedboxList = localStorage.getItem("checkboxStates");
-        checkedboxList ? console.log(`Exists`) : console.log(`Error at retrieving the checkbox states: Do not exist`) ;
+        if (checkedboxList){ 
+            console.log(`Exists`);
+        } else {
+            console.log("Checkbox States do not exist: Resetting list."); 
+            localStorage.removeItem("todoList");
+            break;
+        }
         let tdListArr = tdList.split(",");
         let checkboxStatesArr = checkedboxList.split(",");
         for(i of tdListArr){
