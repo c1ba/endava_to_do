@@ -22,19 +22,18 @@ let loadLocalStorage = ()=>{
         const checkedboxList = localStorage.getItem("checkboxStates");
         if (checkedboxList){ 
             console.log(`Exists`);
+            let tdListArr = tdList.split(",");
+            let checkboxStatesArr = checkedboxList.split(",");
+            for(i of tdListArr){
+                addFromLocalStorage(i);
+            }
+            let checkboxes = document.getElementsByClassName(`cb`);
+            for(i = 0; i < checkboxStatesArr.length; i++){
+                checkboxes[i].checked = (checkboxStatesArr[i].toLowerCase() === 'true');
+            }
         } else {
             console.log("Checkbox States do not exist: Resetting list."); 
             localStorage.removeItem("todoList");
-            break;
-        }
-        let tdListArr = tdList.split(",");
-        let checkboxStatesArr = checkedboxList.split(",");
-        for(i of tdListArr){
-            addFromLocalStorage(i);
-        }
-        let checkboxes = document.getElementsByClassName(`cb`);
-        for(i = 0; i < checkboxStatesArr.length; i++){
-            checkboxes[i].checked = (checkboxStatesArr[i].toLowerCase() === 'true');
         }
     }
     else{
